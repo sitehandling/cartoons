@@ -1486,12 +1486,35 @@ body.cursor-hover .cursor-ring {
 
 
 .card-row {
-    display: grid;
+    display: flex;
 
-    grid-template-columns:
-        repeat(5, minmax(0, 1fr));
+    flex-wrap: nowrap;
 
     gap: 14px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+
+    padding: 2px 2px 10px;
+}
+
+.card-row::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Keep every card inside the carousel */
+.card-row .video-card,
+.card-row .new-card {
+    flex: 0 0 calc(
+        (100% - 56px) / 5
+    );
+
+    min-width: 0;
 }
 
 
