@@ -2,14 +2,1002 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartoons</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#050714">
+
+    <title>ToonStream — Endless Fun</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
 </head>
 
 <body>
 
-    <h1>Welcome to Cartoons</h1>
-    <p>My streaming website is coming soon.</p>
+<!-- =========================================
+     CUSTOM CURSOR
+========================================= -->
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+
+<!-- =========================================
+     BACKGROUND EFFECTS
+========================================= -->
+
+<div class="background-effects">
+    <span class="particle p1"></span>
+    <span class="particle p2"></span>
+    <span class="particle p3"></span>
+    <span class="particle p4"></span>
+    <span class="particle p5"></span>
+    <span class="particle p6"></span>
+    <span class="particle p7"></span>
+    <span class="particle p8"></span>
+</div>
+
+
+<!-- =========================================
+     SIDEBAR
+========================================= -->
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-logo">
+        <div class="logo-icon">
+            <span>▶</span>
+        </div>
+
+        <span class="logo-text">
+            <span class="logo-red">Toon</span><span class="logo-yellow">S</span><span class="logo-green">tream</span>
+        </span>
+    </div>
+
+
+    <nav class="side-nav">
+
+        <a href="#" class="side-link active" data-tooltip="Home">
+            <span class="side-icon">⌂</span>
+            <span class="side-label">Home</span>
+        </a>
+
+        <a href="#trending" class="side-link" data-tooltip="Videos">
+            <span class="side-icon">▶</span>
+            <span class="side-label">Videos</span>
+        </a>
+
+        <a href="#series" class="side-link" data-tooltip="Series">
+            <span class="side-icon">🎮</span>
+            <span class="side-label">Series</span>
+        </a>
+
+        <a href="#my-list" class="side-link" data-tooltip="My List">
+            <span class="side-icon">♥</span>
+            <span class="side-label">My List</span>
+        </a>
+
+        <a href="#continue" class="side-link" data-tooltip="History">
+            <span class="side-icon">◷</span>
+            <span class="side-label">History</span>
+        </a>
+
+        <a href="#categories" class="side-link" data-tooltip="Categories">
+            <span class="side-icon">▦</span>
+            <span class="side-label">Categories</span>
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <button class="side-link side-button" id="themeButton">
+            <span class="side-icon">✦</span>
+            <span class="side-label">Theme</span>
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- =========================================
+     MAIN CONTENT
+========================================= -->
+
+<main class="main-content">
+
+
+<!-- =========================================
+     TOP NAVIGATION
+========================================= -->
+
+<header class="topbar">
+
+    <button class="mobile-menu" id="mobileMenu">
+        ☰
+    </button>
+
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            ▶
+        </div>
+
+        <div class="brand-name">
+            <span>Toon</span><b>Stream</b>
+        </div>
+
+    </div>
+
+
+    <nav class="main-nav">
+
+        <a href="#" class="nav-item active">
+            Home
+        </a>
+
+        <a href="#series" class="nav-item">
+            Series
+        </a>
+
+        <a href="#movies" class="nav-item">
+            Movies
+        </a>
+
+        <a href="#categories" class="nav-item">
+            Categories
+            <span class="down-arrow">⌄</span>
+        </a>
+
+        <a href="#my-list" class="nav-item">
+            My List
+        </a>
+
+    </nav>
+
+
+    <div class="top-actions">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search cartoons, series..."
+                autocomplete="off">
+
+            <button id="searchButton">
+                🔍
+            </button>
+
+        </div>
+
+
+        <button class="notification-button" id="notificationButton">
+            ♧
+            <span class="notification-dot"></span>
+        </button>
+
+
+        <button class="profile-button">
+            🧑‍🎨
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="hero" id="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <span class="hero-small">
+                ✨ WELCOME TO TOONSTREAM
+            </span>
+
+            <h1>
+                Endless Fun.
+                <br>
+                Unlimited
+                <span>Cartoons!</span>
+            </h1>
+
+            <p>
+                Watch your favorite cartoon shows and
+                movies anytime, anywhere.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <button class="primary-button" id="watchNow">
+                    <span>▶</span>
+                    Watch Now
+                </button>
+
+                <button class="secondary-button" id="exploreButton">
+                    <span>🚀</span>
+                    Explore More
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO VISUAL -->
+
+        <div class="hero-visual">
+
+            <div class="space-ring ring-one"></div>
+            <div class="space-ring ring-two"></div>
+            <div class="space-ring ring-three"></div>
+
+
+            <div class="hero-stars">
+                ✦
+            </div>
+
+
+            <div class="character character-one">
+                🐱
+            </div>
+
+            <div class="character character-two">
+                😮
+            </div>
+
+            <div class="character character-three">
+                ⚡
+            </div>
+
+            <div class="character character-four">
+                🐭
+            </div>
+
+
+            <div class="play-orb">
+                ▶
+            </div>
+
+
+            <div class="mouse-rocket">
+                ➤
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-dots">
+
+        <button class="hero-dot active"></button>
+        <button class="hero-dot"></button>
+        <button class="hero-dot"></button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     QUICK CATEGORIES
+========================================= -->
+
+<section class="quick-categories" id="categories">
+
+    <button class="quick-card pink">
+        <span class="quick-icon">🔥</span>
+        <span>
+            <b>Popular</b>
+            <small>Top picks for you</small>
+        </span>
+    </button>
+
+
+    <button class="quick-card cyan">
+        <span class="quick-icon">NEW</span>
+        <span>
+            <b>New Episodes</b>
+            <small>Just updated</small>
+        </span>
+    </button>
+
+
+    <button class="quick-card yellow">
+        <span class="quick-icon">★</span>
+        <span>
+            <b>Top Rated</b>
+            <small>Best of the best</small>
+        </span>
+    </button>
+
+
+    <button class="quick-card purple" id="movies">
+        <span class="quick-icon">🎬</span>
+        <span>
+            <b>Movies</b>
+            <small>Big screen fun</small>
+        </span>
+    </button>
+
+
+    <button class="quick-card green">
+        <span class="quick-icon">▣</span>
+        <span>
+            <b>Live TV</b>
+            <small>24/7 cartoons</small>
+        </span>
+    </button>
+
+</section>
+
+
+<!-- =========================================
+     TRENDING
+========================================= -->
+
+<section class="content-section" id="trending">
+
+    <div class="section-heading">
+
+        <h2>
+            <span class="heading-icon fire">🔥</span>
+            Trending Now
+        </h2>
+
+        <button class="view-all">
+            View All
+            <span>›</span>
+        </button>
+
+    </div>
+
+
+    <div class="carousel-container">
+
+        <button class="carousel-arrow left" data-carousel="trendingRow">
+            ‹
+        </button>
+
+
+        <div class="card-row" id="trendingRow">
+
+            <!-- CARD -->
+
+            <article class="video-card"
+                     data-title="BEN10">
+
+                <div class="thumbnail thumb-blue">
+
+                    <span class="card-badge">
+                        Trending
+                    </span>
+
+                    <img
+                        src="images/thumbnails/ben10.jpg"
+                        alt="ben10"
+                        class="thumbnail-image">
+
+                    <button class="more-button">
+                        ⋮
+                    </button>
+
+                </div>
+
+                <div class="card-info">
+
+                    <h3>BEN 10</h3>
+
+                    <div class="card-meta">
+                        <span>1,245 Episodes</span>
+                        <span class="rating">★ 4.8</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="video-card"
+                     data-title="Shinchan">
+
+                <div class="thumbnail thumb-red">
+
+                    <span class="card-badge">
+                        Trending
+                    </span>
+
+                    <span class="thumbnail-character">
+                        😮
+                    </span>
+
+                    <button class="more-button">
+                        ⋮
+                    </button>
+
+                </div>
+
+                <div class="card-info">
+
+                    <h3>Shinchan</h3>
+
+                    <div class="card-meta">
+                        <span>975 Episodes</span>
+                        <span class="rating">★ 4.7</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="video-card"
+                     data-title="Pokemon Journeys">
+
+                <div class="thumbnail thumb-yellow">
+
+                    <span class="card-badge">
+                        Trending
+                    </span>
+
+                    <span class="thumbnail-character">
+                        ⚡
+                    </span>
+
+                    <button class="more-button">
+                        ⋮
+                    </button>
+
+                </div>
+
+                <div class="card-info">
+
+                    <h3>Pokemon Journeys</h3>
+
+                    <div class="card-meta">
+                        <span>120 Episodes</span>
+                        <span class="rating">★ 4.9</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="video-card"
+                     data-title="Tom and Jerry">
+
+                <div class="thumbnail thumb-orange">
+
+                    <span class="card-badge">
+                        Trending
+                    </span>
+
+                    <span class="thumbnail-character">
+                        🐭
+                    </span>
+
+                    <button class="more-button">
+                        ⋮
+                    </button>
+
+                </div>
+
+                <div class="card-info">
+
+                    <h3>Tom &amp; Jerry</h3>
+
+                    <div class="card-meta">
+                        <span>163 Episodes</span>
+                        <span class="rating">★ 4.6</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="video-card"
+                     data-title="Dragon Ball Super">
+
+                <div class="thumbnail thumb-cyan">
+
+                    <span class="card-badge">
+                        Trending
+                    </span>
+
+                    <span class="thumbnail-character">
+                        ⚡
+                    </span>
+
+                    <button class="more-button">
+                        ⋮
+                    </button>
+
+                </div>
+
+                <div class="card-info">
+
+                    <h3>Dragon Ball Super</h3>
+
+                    <div class="card-meta">
+                        <span>131 Episodes</span>
+                        <span class="rating">★ 4.9</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <button class="carousel-arrow right" data-carousel="trendingRow">
+            ›
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CONTINUE WATCHING
+========================================= -->
+
+<section class="content-section" id="continue">
+
+    <div class="section-heading">
+
+        <h2>
+            <span class="heading-icon cyan-icon">◷</span>
+            Continue Watching
+        </h2>
+
+    </div>
+
+
+    <div class="continue-grid">
+
+
+        <article class="continue-card">
+
+            <div class="continue-image thumb-green">
+
+                <span>🧒</span>
+
+                <button class="continue-play">
+                    ▶
+                </button>
+
+            </div>
+
+            <div class="continue-info">
+
+                <div>
+                    <h3>Ben 10</h3>
+                    <small>S3 E12</small>
+                </div>
+
+                <span class="percentage">
+                    65%
+                </span>
+
+            </div>
+
+            <div class="progress">
+                <span style="width:65%"></span>
+            </div>
+
+        </article>
+
+
+        <article class="continue-card">
+
+            <div class="continue-image thumb-orange">
+
+                <span>🥷</span>
+
+                <button class="continue-play">
+                    ▶
+                </button>
+
+            </div>
+
+            <div class="continue-info">
+
+                <div>
+                    <h3>Naruto Shippuden</h3>
+                    <small>S5 E24</small>
+                </div>
+
+                <span class="percentage">
+                    42%
+                </span>
+
+            </div>
+
+            <div class="progress purple-progress">
+                <span style="width:42%"></span>
+            </div>
+
+        </article>
+
+
+        <article class="continue-card">
+
+            <div class="continue-image thumb-pink">
+
+                <span>🐙</span>
+
+                <button class="continue-play">
+                    ▶
+                </button>
+
+            </div>
+
+            <div class="continue-info">
+
+                <div>
+                    <h3>Oggy &amp; the Cockroaches</h3>
+                    <small>S2 E18</small>
+                </div>
+
+                <span class="percentage">
+                    80%
+                </span>
+
+            </div>
+
+            <div class="progress orange-progress">
+                <span style="width:80%"></span>
+            </div>
+
+        </article>
+
+
+        <article class="continue-card">
+
+            <div class="continue-image thumb-brown">
+
+                <span>🐻</span>
+
+                <button class="continue-play">
+                    ▶
+                </button>
+
+            </div>
+
+            <div class="continue-info">
+
+                <div>
+                    <h3>We Bare Bears</h3>
+                    <small>S1 E9</small>
+                </div>
+
+                <span class="percentage">
+                    30%
+                </span>
+
+            </div>
+
+            <div class="progress green-progress">
+                <span style="width:30%"></span>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     NEW RELEASES
+========================================= -->
+
+<section class="content-section" id="series">
+
+    <div class="section-heading">
+
+        <h2>
+            <span class="heading-icon new-icon">NEW</span>
+            New on ToonStream
+        </h2>
+
+        <button class="view-all">
+            View All
+            <span>›</span>
+        </button>
+
+    </div>
+
+
+    <div class="carousel-container">
+
+        <button class="carousel-arrow left" data-carousel="newRow">
+            ‹
+        </button>
+
+
+        <div class="card-row" id="newRow">
+
+
+            <article class="new-card"
+                     data-title="Teen Titans Go">
+
+                <div class="new-thumbnail new-pink">
+
+                    <span class="big-emoji">🦸</span>
+
+                    <button class="more-button">
+                        ⋮
+                    </button>
+
+                </div>
+
+                <div class="new-info">
+
+                    <h3>Teen Titans Go!</h3>
+                    <span>Season 8</span>
+
+                    <div>
+                        <small>2024</small>
+                        <small>NEW</small>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="new-card"
+                     data-title="Craig of the Creek">
+
+                <div class="new-thumbnail new-green">
+
+                    <span class="big-emoji">🌳</span>
+
+                    <button class="more-button">
+                        ⋮
+                    </button>
+
+                </div>
+
+                <div class="new-info">
+
+                    <h3>Craig of the Creek</h3>
+                    <span>Season 6</span>
+
+                    <div>
+                        <small>2024</small>
+                        <small>NEW</small>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="new-card"
+                     data-title="Amazing World of Gumball">
+
+                <div class="new-thumbnail new-blue">
+
+                    <span class="big-emoji">🐱</span>
+
+                    <button class="more-button">
+                        ⋮
+                    </button>
+
+                </div>
+
+                <div class="new-info">
+
+                    <h3>The Amazing World of Gumball</h3>
+                    <span>Season 7</span>
+
+                    <div>
+                        <small>2024</small>
+                        <small>NEW</small>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="new-card"
+                     data-title="Bluey">
+
+                <div class="new-thumbnail new-sky">
+
+                    <span class="big-emoji">🐶</span>
+
+                    <button class="more-button">
+                        ⋮
+                    </button>
+
+                </div>
+
+                <div class="new-info">
+
+                    <h3>Bluey</h3>
+                    <span>Season 3</span>
+
+                    <div>
+                        <small>2024</small>
+                        <small>NEW</small>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="new-card"
+                     data-title="Mighty Magiswords">
+
+                <div class="new-thumbnail new-purple">
+
+                    <span class="big-emoji">🧙</span>
+
+                    <button class="more-button">
+                        ⋮
+                    </button>
+
+                </div>
+
+                <div class="new-info">
+
+                    <h3>Mighty Magiswords</h3>
+                    <span>Season 2</span>
+
+                    <div>
+                        <small>2024</small>
+                        <small>NEW</small>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <button class="carousel-arrow right" data-carousel="newRow">
+            ›
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     MY LIST
+========================================= -->
+
+<section class="content-section my-list-section" id="my-list">
+
+    <div class="section-heading">
+
+        <h2>
+            <span class="heading-icon heart-icon">♥</span>
+            My List
+        </h2>
+
+    </div>
+
+
+    <div class="empty-list" id="emptyList">
+
+        <div class="empty-icon">
+            ♥
+        </div>
+
+        <h3>Your list is empty</h3>
+
+        <p>
+            Add your favorite cartoons and they will appear here.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="footer">
+
+    <div class="footer-wave"></div>
+
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+            <span>Toon</span><b>Stream</b>
+        </div>
+
+        <p>
+            Made with <span>♥</span> for all cartoon lovers
+        </p>
+
+
+        <div class="socials">
+
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="YouTube">▶</a>
+            <a href="#" aria-label="Twitter">♥</a>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#">About</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Contact</a>
+
+        </div>
+
+
+        <small>
+            © 2026 ToonStream. All rights reserved.
+        </small>
+
+    </div>
+
+
+    <div class="jellyfish">
+        🪼
+    </div>
+
+</footer>
+
+
+<!-- =========================================
+     BACK TO TOP
+========================================= -->
+
+<button class="back-top" id="backTop">
+    ↑
+</button>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="js/app.js"></script>
+<script src="js/data.js"></script>
 
 </body>
 </html>
