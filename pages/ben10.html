@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Ben 10 Collection | ToonStream</title>
+
+    <!-- Main ToonStream CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+    <style>
+
+        /* =========================================
+           BEN 10 COLLECTION PAGE
+        ========================================= */
+
+        .ben10-page {
+            padding-bottom: 80px;
+        }
+
+        .ben10-header {
+            padding: 35px 0 25px;
+        }
+
+        .ben10-header h1 {
+            font-size: 38px;
+            margin-bottom: 8px;
+        }
+
+        .ben10-header p {
+            color: #9da3c7;
+            font-size: 15px;
+        }
+
+        .ben10-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .ben10-version {
+            position: relative;
+            overflow: hidden;
+            min-height: 230px;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 18px;
+            background: #090c20;
+            cursor: pointer;
+            transition: 0.35s ease;
+        }
+
+        .ben10-version:hover {
+            transform: translateY(-8px);
+            border-color: #00f0ff;
+            box-shadow:
+                0 0 18px rgba(0,240,255,0.35),
+                0 0 45px rgba(255,0,170,0.15);
+        }
+
+        .ben10-version img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+            transition: 0.4s ease;
+        }
+
+        .ben10-version:hover img {
+            transform: scale(1.06);
+        }
+
+        .ben10-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 22px;
+            background:
+                linear-gradient(
+                    transparent 20%,
+                    rgba(3,5,20,0.35) 45%,
+                    rgba(3,5,20,0.96) 100%
+                );
+        }
+
+        .ben10-overlay h2 {
+            margin: 0 0 6px;
+            font-size: 21px;
+            color: #ffffff;
+        }
+
+        .ben10-overlay p {
+            margin: 0 0 10px;
+            color: #b7bddb;
+            font-size: 13px;
+        }
+
+        .ben10-year {
+            display: inline-block;
+            width: fit-content;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            color: #ffffff;
+            background: linear-gradient(
+                90deg,
+                #ff00aa,
+                #7c3cff,
+                #00eaff
+            );
+        }
+
+        .ben10-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+            padding: 10px 18px;
+            border: 1px solid rgba(0,240,255,0.45);
+            border-radius: 30px;
+            color: #ffffff;
+            text-decoration: none;
+            background: rgba(0,240,255,0.06);
+            transition: 0.3s ease;
+        }
+
+        .ben10-back:hover {
+            border-color: #00f0ff;
+            box-shadow: 0 0 18px rgba(0,240,255,0.3);
+        }
+
+        @media (max-width: 900px) {
+
+            .ben10-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .ben10-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ben10-header h1 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         PAGE
+    ========================================= -->
+
+    <main class="main-content ben10-page">
+
+        <!-- HEADER -->
+
+        <section class="ben10-header">
+
+            <a
+                href="../index.html"
+                class="ben10-back">
+
+                ← Back to Home
+
+            </a>
+
+            <h1>
+                🟢 Ben 10 Collection
+            </h1>
+
+            <p>
+                Explore every Ben 10 adventure on ToonStream.
+            </p>
+
+        </section>
+
+
+        <!-- =========================================
+             SEVEN BEN 10 VERSIONS
+        ========================================= -->
+
+        <section class="ben10-grid">
+
+
+            <!-- 1. CLASSIC -->
+
+            <article
+    class="ben10-version"
+    data-page="classic"
+    onclick="window.location.href='ben10-classic.html'">
+
+                <img
+                    src="../images/thumbnails/ben10classic.jpg"
+                    alt="Ben 10 Classic">
+
+                <div class="ben10-overlay">
+
+                    <span class="ben10-year">
+                        2005
+                    </span>
+
+                    <h2>
+                        Ben 10 Classic
+                    </h2>
+
+                    <p>
+                        The original Ben 10 series.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- 2. ALIEN FORCE -->
+
+            <article
+                class="ben10-version"
+                data-page="alien-force">
+
+                <img
+                    src="../images/thumbnails/ben10allienforce.jpg"
+                    alt="Ben 10 Alien Force">
+
+                <div class="ben10-overlay">
+
+                    <span class="ben10-year">
+                        2008
+                    </span>
+
+                    <h2>
+                        Ben 10: Alien Force
+                    </h2>
+
+                    <p>
+                        Ben returns as a teenager.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- 3. ULTIMATE ALIEN -->
+
+            <article
+                class="ben10-version"
+                data-page="ultimate-alien">
+
+                <img
+                    src="../images/thumbnails/ben10ultimatealien.jpg"
+                    alt="Ben 10 Ultimate Alien">
+
+                <div class="ben10-overlay">
+
+                    <span class="ben10-year">
+                        2010
+                    </span>
+
+                    <h2>
+                        Ben 10: Ultimate Alien
+                    </h2>
+
+                    <p>
+                        Discover the power of the Ultimatrix.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- 4. OMNIVERSE -->
+
+            <article
+                class="ben10-version"
+                data-page="omniverse">
+
+                <img
+                    src="../images/thumbnails/ben10omniverse.jpg"
+                    alt="Ben 10 Omniverse">
+
+                <div class="ben10-overlay">
+
+                    <span class="ben10-year">
+                        2012
+                    </span>
+
+                    <h2>
+                        Ben 10: Omniverse
+                    </h2>
+
+                    <p>
+                        Ben's next big adventure.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- 5. REBOOT -->
+
+            <article
+                class="ben10-version"
+                data-page="reboot">
+
+                <img
+                    src="../images/thumbnails/ben10reboot.jpg"
+                    alt="Ben 10 Reboot">
+
+                <div class="ben10-overlay">
+
+                    <span class="ben10-year">
+                        2016
+                    </span>
+
+                    <h2>
+                        Ben 10 Reboot
+                    </h2>
+
+                    <p>
+                        The animated reboot of Ben 10.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- 6. MOVIES -->
+
+            <article
+                class="ben10-version"
+                data-page="movies">
+
+                <img
+                    src="../images/thumbnails/ben10movies.jpg"
+                    alt="Ben 10 Movies">
+
+                <div class="ben10-overlay">
+
+                    <span class="ben10-year">
+                        MOVIES
+                    </span>
+
+                    <h2>
+                        Ben 10 Movies
+                    </h2>
+
+                    <p>
+                        Animated and live-action movies.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- 7. SPECIALS -->
+
+            <article
+                class="ben10-version"
+                data-page="specials">
+
+                <img
+                    src="../images/thumbnails/ben10specials.jpg"
+                    alt="Ben 10 Specials">
+
+                <div class="ben10-overlay">
+
+                    <span class="ben10-year">
+                        SPECIALS
+                    </span>
+
+                    <h2>
+                        Ben 10 Specials
+                    </h2>
+
+                    <p>
+                        Special episodes and crossover events.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+    </main>
+
+
+</body>
+
+</html>

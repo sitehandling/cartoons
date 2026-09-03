@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#050714">
+
+    <title>Ben 10 Classic | ToonStream</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        /* =========================================
+           BEN 10 CLASSIC PAGE
+        ========================================= */
+
+        .classic-page {
+
+            padding: 35px 40px 80px;
+
+        }
+
+
+        .classic-header {
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .classic-back {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 10px 20px;
+
+            margin-bottom: 25px;
+
+            border: 1px solid #00eaff;
+
+            border-radius: 30px;
+
+            color: white;
+
+            text-decoration: none;
+
+            transition: .3s ease;
+
+        }
+
+
+        .classic-back:hover {
+
+            box-shadow:
+                0 0 15px rgba(0,234,255,.5);
+
+            transform: translateX(-3px);
+
+        }
+
+
+        .classic-title {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+        }
+
+
+        .classic-title-icon {
+
+            width: 55px;
+
+            height: 55px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 50%;
+
+            font-size: 28px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #00ff88,
+                    #00eaff
+                );
+
+            box-shadow:
+                0 0 25px rgba(0,255,150,.35);
+
+        }
+
+
+        .classic-title h1 {
+
+            margin: 0;
+
+            font-size: 38px;
+
+            color: white;
+
+        }
+
+
+        .classic-description {
+
+            margin-top: 10px;
+
+            color: #aeb5d4;
+
+            font-size: 15px;
+
+        }
+
+
+        /* =========================================
+           SEASON GRID
+        ========================================= */
+
+        .season-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+
+        }
+
+
+        .season-card {
+
+            position: relative;
+
+            min-height: 210px;
+
+            overflow: hidden;
+
+            border-radius: 18px;
+
+            border: 1px solid
+                rgba(255,255,255,.12);
+
+            background: #080b1d;
+
+            cursor: pointer;
+
+            transition:
+                transform .35s ease,
+                border-color .35s ease,
+                box-shadow .35s ease;
+
+        }
+
+
+        .season-card:hover {
+
+            transform: translateY(-8px);
+
+            border-color: #00eaff;
+
+            box-shadow:
+                0 0 20px
+                rgba(0,234,255,.35),
+                0 0 50px
+                rgba(255,0,170,.12);
+
+        }
+
+
+        .season-image {
+
+            width: 100%;
+
+            height: 210px;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition:
+                transform .45s ease;
+
+        }
+
+
+        .season-card:hover
+        .season-image {
+
+            transform: scale(1.07);
+
+        }
+
+
+        .season-overlay {
+
+            position: absolute;
+
+            inset: 0;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: flex-end;
+
+            padding: 22px;
+
+            background:
+                linear-gradient(
+                    transparent 20%,
+                    rgba(3,5,20,.35) 45%,
+                    rgba(3,5,20,.96) 100%
+                );
+
+        }
+
+
+        .season-number {
+
+            width: fit-content;
+
+            padding: 5px 12px;
+
+            margin-bottom: 8px;
+
+            border-radius: 20px;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ff009d,
+                    #7c3cff,
+                    #00eaff
+                );
+
+        }
+
+
+        .season-overlay h2 {
+
+            margin: 0 0 5px;
+
+            color: white;
+
+            font-size: 22px;
+
+        }
+
+
+        .season-overlay p {
+
+            margin: 0;
+
+            color: #c2c7df;
+
+            font-size: 13px;
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .season-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .classic-page {
+
+                padding: 25px 18px 60px;
+
+            }
+
+
+            .season-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .classic-title h1 {
+
+                font-size: 29px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         CUSTOM CURSOR
+    ========================================= -->
+
+    <div class="cursor-dot"></div>
+
+    <div class="cursor-ring"></div>
+
+
+    <!-- =========================================
+         BACKGROUND
+    ========================================= -->
+
+    <div class="background-effects">
+
+        <span class="particle p1"></span>
+        <span class="particle p2"></span>
+        <span class="particle p3"></span>
+        <span class="particle p4"></span>
+        <span class="particle p5"></span>
+        <span class="particle p6"></span>
+
+    </div>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================= -->
+
+    <main class="main-content classic-page">
+
+
+        <!-- HEADER -->
+
+        <section class="classic-header">
+
+
+            <a href="ben10.html"
+               class="classic-back">
+
+                ← Back to Ben 10
+
+            </a>
+
+
+            <div class="classic-title">
+
+                <div class="classic-title-icon">
+
+                    🟢
+
+                </div>
+
+
+                <div>
+
+                    <h1>
+                        Ben 10 Classic
+                    </h1>
+
+                    <p class="classic-description">
+
+                        The original Ben 10 series • 2005
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             SEASONS
+        ====================================== -->
+
+        <section class="season-grid">
+
+
+            <!-- SEASON 1 -->
+
+            <article
+    class="season-card"
+    data-season="1"
+    onclick="window.location.href='ben10-classic-season1.html'">
+
+                <img
+                    src="../images/thumbnails/ben10classics1.jpg"
+                    alt="Ben 10 Classic Season 1"
+                    class="season-image">
+
+
+                <div class="season-overlay">
+
+                    <span class="season-number">
+                        SEASON 1
+                    </span>
+
+                    <h2>
+                        Season 1
+                    </h2>
+
+                    <p>
+                        Ben discovers the Omnitrix.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SEASON 2 -->
+
+            <article
+                class="season-card"
+                data-season="2">
+
+                <img
+                    src="../images/thumbnails/ben10classics2.jpg"
+                    alt="Ben 10 Classic Season 2"
+                    class="season-image">
+
+
+                <div class="season-overlay">
+
+                    <span class="season-number">
+                        SEASON 2
+                    </span>
+
+                    <h2>
+                        Season 2
+                    </h2>
+
+                    <p>
+                        New aliens and new adventures.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SEASON 3 -->
+
+            <article
+                class="season-card"
+                data-season="3">
+
+                <img
+                    src="../images/thumbnails/ben10classics3.jpg"
+                    alt="Ben 10 Classic Season 3"
+                    class="season-image">
+
+
+                <div class="season-overlay">
+
+                    <span class="season-number">
+                        SEASON 3
+                    </span>
+
+                    <h2>
+                        Season 3
+                    </h2>
+
+                    <p>
+                        Ben faces bigger challenges.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SEASON 4 -->
+
+            <article
+                class="season-card"
+                data-season="4">
+
+                <img
+                    src="../images/thumbnails/ben10classics4.jpg"
+                    alt="Ben 10 Classic Season 4"
+                    class="season-image">
+
+
+                <div class="season-overlay">
+
+                    <span class="season-number">
+                        SEASON 4
+                    </span>
+
+                    <h2>
+                        Season 4
+                    </h2>
+
+                    <p>
+                        The final Classic season.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- CLASSIC SHORTS -->
+
+            <article
+                class="season-card"
+                data-season="shorts">
+
+                <img
+                    src="../images/thumbnails/ben10classicshorts.jpg"
+                    alt="Ben 10 Classic Shorts"
+                    class="season-image">
+
+
+                <div class="season-overlay">
+
+                    <span class="season-number">
+                        SPECIAL
+                    </span>
+
+                    <h2>
+                        Classic Shorts
+                    </h2>
+
+                    <p>
+                        Short adventures from the Classic era.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script src="../js/app.js"></script>
+
+
+</body>
+
+</html>

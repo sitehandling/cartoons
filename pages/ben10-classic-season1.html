@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#000000">
+
+    <title>Ben 10 Classic — Season 1 | ToonStream</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        /* =========================================
+           BEN 10 CLASSIC — SEASON 1
+        ========================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+            background: #000000;
+            color: #ffffff;
+            font-family: "Nunito", sans-serif;
+        }
+
+
+        /* =========================================
+           PAGE
+        ========================================= */
+
+        .season-page {
+
+            min-height: 100vh;
+
+            padding:
+                30px
+                36px
+                70px;
+
+            background: #000000;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        .season-header {
+
+            margin-bottom: 36px;
+        }
+
+
+        /* =========================================
+           BACK BUTTON
+        ========================================= */
+
+        .season-back {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding:
+                12px
+                22px;
+
+            margin-bottom: 36px;
+
+            border:
+                1px solid
+                #39ff14;
+
+            border-radius: 30px;
+
+            color:
+                #b8ff9e;
+
+            background:
+                transparent;
+
+            text-decoration: none;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            transition:
+                .25s ease;
+        }
+
+
+        .season-back:hover {
+
+            color: #ffffff;
+
+            background:
+                rgba(57,255,20,.08);
+
+            box-shadow:
+                0 0 18px
+                rgba(57,255,20,.35);
+
+            transform:
+                translateX(-4px);
+        }
+
+
+        /* =========================================
+           SEASON HEADING
+        ========================================= */
+
+        .season-heading {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 26px;
+        }
+
+
+        /* =========================================
+           OMNITRIX ICON
+        ========================================= */
+
+        .season-icon {
+
+            width: 88px;
+
+            height: 88px;
+
+            flex-shrink: 0;
+
+            display: grid;
+
+            place-items: center;
+
+            border:
+                3px solid
+                #39ff14;
+
+            border-radius: 50%;
+
+            background: #39ff14;
+
+            box-shadow:
+                0 0 12px
+                rgba(57,255,20,.8),
+
+                0 0 30px
+                rgba(57,255,20,.45);
+
+            position: relative;
+        }
+
+
+        .season-icon::before {
+
+            content: "";
+
+            width: 42px;
+
+            height: 48px;
+
+            background: #000000;
+
+            clip-path:
+                polygon(
+                    0 0,
+                    100% 0,
+                    65% 50%,
+                    100% 100%,
+                    0 100%,
+                    35% 50%
+                );
+        }
+
+
+        /* =========================================
+           HEADING TEXT
+        ========================================= */
+
+        .season-heading h1 {
+
+            margin: 0;
+
+            color:
+                #39ff14;
+
+            font-size:
+                clamp(
+                    32px,
+                    4vw,
+                    55px
+                );
+
+            line-height: 1.05;
+
+            font-weight: 900;
+
+            letter-spacing:
+                -1px;
+
+            text-shadow:
+                0 0 10px
+                rgba(57,255,20,.25);
+        }
+
+
+        .season-heading p {
+
+            margin:
+                14px 0 0;
+
+            color:
+                #39ff14;
+
+            font-size:
+                19px;
+
+            font-weight:
+                600;
+
+            opacity:
+                .85;
+        }
+
+
+        /* =========================================
+           EPISODE GRID
+        ========================================= */
+
+        .episode-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap:
+                18px;
+
+            width: 100%;
+        }
+
+
+        /* =========================================
+           EPISODE CARD
+        ========================================= */
+
+        .episode-card {
+
+            position: relative;
+
+            min-height:
+                220px;
+
+            overflow: hidden;
+
+            padding:
+                30px 28px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.14);
+
+            border-radius:
+                16px;
+
+            background:
+                #000000;
+
+            cursor: pointer;
+
+            transition:
+                transform .25s ease,
+                border-color .25s ease,
+                box-shadow .25s ease;
+        }
+
+
+        /* =========================================
+           ALL EPISODES SAME BY DEFAULT
+        ========================================= */
+
+        .episode-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                #39ff14;
+
+            box-shadow:
+                0 0 18px
+                rgba(57,255,20,.25);
+        }
+
+
+        /* =========================================
+           EPISODE CONTENT
+        ========================================= */
+
+        .episode-content {
+
+            position: relative;
+
+            z-index: 3;
+
+            height: 100%;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+        }
+
+
+        /* =========================================
+           EPISODE NUMBER
+        ========================================= */
+
+        .episode-number {
+
+            display: inline-block;
+
+            width: fit-content;
+
+            margin-bottom:
+                20px;
+
+            color:
+                #39ff14;
+
+            font-size:
+                17px;
+
+            font-weight:
+                900;
+
+            letter-spacing:
+                .5px;
+        }
+
+
+        /* =========================================
+           EPISODE TITLE
+        ========================================= */
+
+        .episode-content h2 {
+
+            margin:
+                0 0 12px;
+
+            color:
+                #ffffff;
+
+            font-size:
+                27px;
+
+            line-height:
+                1.2;
+
+            font-weight:
+                800;
+        }
+
+
+        /* =========================================
+           DESCRIPTION
+        ========================================= */
+
+        .episode-content p {
+
+            margin:
+                0;
+
+            max-width:
+                330px;
+
+            color:
+                #b7b7b7;
+
+            font-size:
+                16px;
+
+            line-height:
+                1.5;
+
+            font-weight:
+                500;
+        }
+
+
+        /* =========================================
+           PLAY BUTTON
+        ========================================= */
+
+        .episode-play {
+
+            position: absolute;
+
+            top:
+                48px;
+
+            right:
+                30px;
+
+            z-index: 5;
+
+            width:
+                60px;
+
+            height:
+                60px;
+
+            display: grid;
+
+            place-items: center;
+
+            border:
+                2px solid
+                #39ff14;
+
+            border-radius:
+                50%;
+
+            color:
+                #000000;
+
+            background:
+                #39ff14;
+
+            font-size:
+                22px;
+
+            opacity:
+                0;
+
+            transform:
+                scale(.75);
+
+            transition:
+                .25s ease;
+
+            cursor:
+                pointer;
+        }
+
+
+        /* =========================================
+           HOVER PLAY EFFECT
+        ========================================= */
+
+        .episode-card:hover
+        .episode-play {
+
+            opacity:
+                1;
+
+            transform:
+                scale(1);
+
+            box-shadow:
+                0 0 20px
+                rgba(57,255,20,.55);
+        }
+
+
+        /* =========================================
+           IMAGE DISABLED
+        ========================================= */
+
+        .episode-image {
+
+            display:
+                none;
+        }
+
+
+        /* =========================================
+           TABLET / SMALL DESKTOP
+        ========================================= */
+
+        @media (max-width: 1100px) {
+
+            .episode-grid {
+
+                grid-template-columns:
+                    repeat(3, minmax(0, 1fr));
+            }
+
+
+            .season-heading h1 {
+
+                font-size:
+                    42px;
+            }
+
+        }
+
+
+        /* =========================================
+           TABLET
+        ========================================= */
+
+        @media (max-width: 800px) {
+
+            .season-page {
+
+                padding:
+                    25px
+                    20px
+                    60px;
+            }
+
+
+            .episode-grid {
+
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+
+                gap:
+                    15px;
+            }
+
+
+            .season-heading {
+
+                gap:
+                    18px;
+            }
+
+
+            .season-icon {
+
+                width:
+                    72px;
+
+                height:
+                    72px;
+            }
+
+
+            .season-icon::before {
+
+                width:
+                    34px;
+
+                height:
+                    40px;
+            }
+
+
+            .season-heading h1 {
+
+                font-size:
+                    34px;
+            }
+
+
+            .season-heading p {
+
+                font-size:
+                    16px;
+            }
+
+
+            .episode-card {
+
+                min-height:
+                    205px;
+
+                padding:
+                    24px
+                    22px;
+            }
+
+
+            .episode-content h2 {
+
+                font-size:
+                    22px;
+            }
+
+
+            .episode-content p {
+
+                font-size:
+                    14px;
+            }
+
+
+            .episode-play {
+
+                width:
+                    52px;
+
+                height:
+                    52px;
+
+                top:
+                    28px;
+
+                right:
+                    22px;
+
+                font-size:
+                    19px;
+            }
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 600px) {
+
+            .season-page {
+
+                padding:
+                    20px
+                    15px
+                    50px;
+            }
+
+
+            .season-back {
+
+                margin-bottom:
+                    28px;
+
+                padding:
+                    10px
+                    17px;
+
+                font-size:
+                    14px;
+            }
+
+
+            .season-heading {
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    15px;
+            }
+
+
+            .season-icon {
+
+                width:
+                    58px;
+
+                height:
+                    58px;
+
+                border-width:
+                    2px;
+            }
+
+
+            .season-icon::before {
+
+                width:
+                    28px;
+
+                height:
+                    32px;
+            }
+
+
+            .season-heading h1 {
+
+                font-size:
+                    27px;
+
+                line-height:
+                    1.1;
+            }
+
+
+            .season-heading p {
+
+                margin-top:
+                    8px;
+
+                font-size:
+                    14px;
+            }
+
+
+            .episode-grid {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    13px;
+            }
+
+
+            .episode-card {
+
+                min-height:
+                    175px;
+
+                padding:
+                    25px
+                    22px;
+
+                border-radius:
+                    14px;
+            }
+
+
+            .episode-number {
+
+                margin-bottom:
+                    12px;
+
+                font-size:
+                    14px;
+            }
+
+
+            .episode-content h2 {
+
+                font-size:
+                    22px;
+
+                max-width:
+                    75%;
+            }
+
+
+            .episode-content p {
+
+                font-size:
+                    14px;
+
+                max-width:
+                    75%;
+            }
+
+
+            /* Play button visible on mobile */
+
+            .episode-play {
+
+                top:
+                    25px;
+
+                right:
+                    20px;
+
+                width:
+                    48px;
+
+                height:
+                    48px;
+
+                opacity:
+                    .85;
+
+                transform:
+                    scale(1);
+
+                font-size:
+                    18px;
+            }
+
+        }
+
+
+        /* =========================================
+           VERY SMALL PHONES
+        ========================================= */
+
+        @media (max-width: 380px) {
+
+            .season-heading h1 {
+
+                font-size:
+                    23px;
+            }
+
+
+            .season-heading p {
+
+                font-size:
+                    13px;
+            }
+
+
+            .season-icon {
+
+                width:
+                    52px;
+
+                height:
+                    52px;
+            }
+
+
+            .episode-card {
+
+                min-height:
+                    165px;
+            }
+
+
+            .episode-content h2 {
+
+                font-size:
+                    20px;
+            }
+
+        }
+
+
+        /* =========================================
+           REDUCED MOTION
+        ========================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .episode-card,
+            .season-back,
+            .episode-play {
+
+                transition:
+                    none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================= -->
+
+    <main class="main-content season-page">
+
+
+        <!-- =====================================
+             HEADER
+        ====================================== -->
+
+        <section class="season-header">
+
+
+            <!-- BACK BUTTON -->
+
+            <a href="ben10-classic.html"
+               class="season-back">
+
+                ← Back to Ben 10 Classic
+
+            </a>
+
+
+            <!-- SEASON TITLE -->
+
+            <div class="season-heading">
+
+
+                <div class="season-icon"
+                     aria-hidden="true">
+                </div>
+
+
+                <div>
+
+                    <h1>
+                        Ben 10 Classic — Season 1
+                    </h1>
+
+                    <p>
+                        Season 1 • 13 Episodes • 2005
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             EPISODE GRID
+        ====================================== -->
+
+        <section class="episode-grid">
+
+
+            <!-- EPISODE 01 -->
+
+            <article class="episode-card"
+                     data-episode="1"
+                     onclick="window.location.href='ben10-classic-s1-ep1.html'">
+
+                <div class="episode-content">
+
+                    <span class="episode-number">
+                        EPISODE 01
+                    </span>
+
+                    <h2>
+                        And Then There Were 10
+                    </h2>
+
+                    <p>
+                        Ben discovers the Omnitrix.
+                    </p>
+
+                </div>
+
+
+                <button class="episode-play"
+                        type="button"
+                        aria-label="Play Episode 1">
+
+                    ▶
+
+                </button>
+
+            </article>
+
+
+
+            <!-- EPISODE 02 -->
+
+            <article class="episode-card"
+                     data-episode="2"
+                     onclick="window.location.href='ben10-classic-s1-ep2.html'">
+
+                <div class="episode-content">
+
+                    <span class="episode-number">
+                        EPISODE 02
+                    </span>
+
+                    <h2>
+                        Washington B.C.
+                    </h2>
+
+                    <p>
+                        Ben begins learning about his new powers.
+                    </p>
+
+                </div>
+
+
+                <button class="episode-play"
+                        type="button"
+                        aria-label="Play Episode 2">
+
+                    ▶
+
+                </button>
+
+            </article>
+
+
+
+            <!-- EPISODE 03 -->
+
+            <article class="episode-card"
+                     data-episode="3"
+                     onclick="window.location.href='ben10-classic-s1-ep3.html'">
+
+                <div class="episode-content">
+
+                    <span class="episode-number">
+                        EPISODE 03
+                    </span>
+
+                    <h2>
+                        The Krakken
+                    </h2>
+
+                    <p>
+                        A mysterious creature appears.
+                    </p>
+
+                </div>
+
+
+                <button class="episode-play"
+                        type="button"
+                        aria-label="Play Episode 3">
+
+                    ▶
+
+                </button>
+
+            </article>
+
+
+
+            <!-- EPISODE 04 -->
+
+            <article class="episode-card"
+                     data-episode="4"
+                     onclick="window.location.href='ben10-classic-s1-ep4.html'">
+
+                <div class="episode-content">
+
+                    <span class="episode-number">
+                        EPISODE 04
+                    </span>
+
+                    <h2>
+                        Permanent Retirement
+                    </h2>
+
+                    <p>
+                        Ben faces a dangerous new enemy.
+                    </p>
+
+                </div>
+
+
+                <button class="episode-play"
+                        type="button"
+                        aria-label="Play Episode 4">
+
+                    ▶
+
+                </button>
+
+            </article>
+
+
+
+            <!-- EPISODE 05 -->
+
+            <article class="episode-card"
+                     data-episode="5"
+                     onclick="window.location.href='ben10-classic-s1-ep5.html'">
+
+                <div class="episode-content">
+
+                    <span class="episode-number">
+                        EPISODE 05
+                    </span>
+
+                    <h2>
+                        Hunted
+                    </h2>
+
+                    <p>
+                        The Omnitrix makes Ben a target.
+                    </p>
+
+                </div>
+
+
+                <button class="episode-play"
+                        type="button"
+                        aria-label="Play Episode 5">
+
+                    ▶
+
+                </button>
+
+            </article>
+
+
+
+            <!-- EPISODE 06 -->
+
+            <article class="episode-card"
+                     data-episode="6"
+                     onclick="window.location.href='ben10-classic-s1-ep6.html'">
+
+                <div class="episode-content">
+
+                    <span class="episode-number">
+                        EPISODE 06
+                    </span>
+
+                    <h2>
+                        Tourist Trap
+                    </h2>
+
+                    <p>
+                        The Tennysons encounter trouble on the road.
+                    </p>
+
+                </div>
+
+
+                <button class="episode-play"
+                        type="button"
+                        aria-label="Play Episode 6">
+
+                    ▶
+
+                </button>
+
+            </article>
+
+
+
+            <!-- EPISODE 07 -->
+
+            <article class="episode-card"
+                     data-episode="7"
+                     onclick="window.location.href='ben10-classic-s1-ep7.html'">
+
+                <div class="episode-content">
+
+                    <span class="episode-number">
+                        EPISODE 07
+                    </span>
+
+                    <h2>
+                        Kevin 11
+                    </h2>
+
+                    <p>
+                        Ben meets a powerful new adversary.
+                    </p>
+
+                </div>
+
+
+                <button class="episode-play"
+                        type="button"
+                        aria-label="Play Episode 7">
+
+                    ▶
+
+                </button>
+
+            </article>
+
+
+
+            <!-- EPISODE 08 -->
+
+            <article class="episode-card"
+                     data-episode="8"
+                     onclick="window.location.href='ben10-classic-s1-ep8.html'">
+
+                <div class="episode-content">
+
+                    <span class="episode-number">
+                        EPISODE 08
+                    </span>
+
+                    <h2>
+                        Gwen 10
+                    </h2>
+
+                    <p>
+                        Gwen gets a chance to use the Omnitrix.
+                    </p>
+
+                </div>
+
+
+                <button class="episode-play"
+                        type="button"
+                        aria-label="Play Episode 8">
+
+                    ▶
+
+                </button>
+
+            </article>
+
+
+
+            <!-- EPISODE 09 -->
+
+            <article class="episode-card"
+                     data-episode="9"
+                     onclick="window.location.href='ben10-classic-s1-ep9.html'">
+
+                <div class="episode-content">
+
+                    <span class="episode-number">
+                        EPISODE 09
+                    </span>
+
+                    <h2>
+                        Lucky Girl
+                    </h2>
+
+                    <p>
+                        Gwen gets a taste of superhero life.
+                    </p>
+
+                </div>
+
+
+                <button class="episode-play"
+                        type="button"
+                        aria-label="Play Episode 9">
+
+                    ▶
+
+                </button>
+
+            </article>
+
+
+
+            <!-- EPISODE 10 -->
+
+            <article class="episode-card"
+                     data-episode="10"
+                     onclick="window.location.href='ben10-classic-s1-ep10.html'">
+
+                <div class="episode-content">
+
+                    <span class="episode-number">
+                        EPISODE 10
+                    </span>
+
+                    <h2>
+                        Summoned
+                    </h2>
+
+                    <p>
+                        A strange summoning changes everything.
+                    </p>
+
+                </div>
+
+
+                <button class="episode-play"
+                        type="button"
+                        aria-label="Play Episode 10">
+
+                    ▶
+
+                </button>
+
+            </article>
+
+
+
+            <!-- EPISODE 11 -->
+
+            <article class="episode-card"
+                     data-episode="11"
+                     onclick="window.location.href='ben10-classic-s1-ep11.html'">
+
+                <div class="episode-content">
+
+                    <span class="episode-number">
+                        EPISODE 11
+                    </span>
+
+                    <h2>
+                        Under Wraps
+                    </h2>
+
+                    <p>
+                        Secrets from the past come to life.
+                    </p>
+
+                </div>
+
+
+                <button class="episode-play"
+                        type="button"
+                        aria-label="Play Episode 11">
+
+                    ▶
+
+                </button>
+
+            </article>
+
+
+
+            <!-- EPISODE 12 -->
+
+            <article class="episode-card"
+                     data-episode="12"
+                     onclick="window.location.href='ben10-classic-s1-ep12.html'">
+
+                <div class="episode-content">
+
+                    <span class="episode-number">
+                        EPISODE 12
+                    </span>
+
+                    <h2>
+                        The Truth
+                    </h2>
+
+                    <p>
+                        Ben learns a shocking truth.
+                    </p>
+
+                </div>
+
+
+                <button class="episode-play"
+                        type="button"
+                        aria-label="Play Episode 12">
+
+                    ▶
+
+                </button>
+
+            </article>
+
+
+
+            <!-- EPISODE 13 -->
+
+            <article class="episode-card"
+                     data-episode="13"
+                     onclick="window.location.href='ben10-classic-s1-ep13.html'">
+
+                <div class="episode-content">
+
+                    <span class="episode-number">
+                        EPISODE 13
+                    </span>
+
+                    <h2>
+                        Secrets
+                    </h2>
+
+                    <p>
+                        Ben faces a major challenge involving the Omnitrix.
+                    </p>
+
+                </div>
+
+
+                <button class="episode-play"
+                        type="button"
+                        aria-label="Play Episode 13">
+
+                    ▶
+
+                </button>
+
+            </article>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <script src="../js/app.js"></script>
+
+
+</body>
+
+</html>

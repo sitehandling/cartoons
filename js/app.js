@@ -496,55 +496,63 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* =====================================================
-       VIDEO CARD CLICK
-    ===================================================== */
+/* =====================================================
+   VIDEO CARD CLICK
+===================================================== */
 
-    const videoCards =
-        document.querySelectorAll(
-            ".video-card, .new-card"
+const videoCards =
+    document.querySelectorAll(
+        ".video-card, .new-card"
+    );
+
+
+videoCards.forEach((card) => {
+
+    card.addEventListener("click", (event) => {
+
+        /* Ignore the three-dot button */
+        if (
+            event.target.closest(".more-button")
+        ) {
+            return;
+        }
+
+
+        /* =============================================
+           BEN 10 TRENDING CARD
+        ============================================= */
+
+        if (
+            card.classList.contains(
+                "ben10-trending-card"
+            )
+        ) {
+
+            window.location.href =
+                "pages/ben10.html";
+
+            return;
+        }
+
+
+        /* =============================================
+           OTHER CARDS — CURRENT DEMO
+        ============================================= */
+
+        const title =
+            card.dataset.title ||
+            card.querySelector("h3")
+                ?.textContent ||
+            "Video";
+
+
+        console.log(
+            `Selected video: ${title}`
         );
-
-
-    videoCards.forEach((card) => {
-
-        card.addEventListener("click", (event) => {
-
-            if (
-                event.target.closest(
-                    ".more-button"
-                )
-            ) {
-                return;
-            }
-
-
-            const title =
-                card.dataset.title ||
-                card.querySelector("h3")
-                    ?.textContent ||
-                "Video";
-
-
-            console.log(
-                `Selected video: ${title}`
-            );
-
-
-            /*
-             * LATER:
-             *
-             * window.location.href =
-             * `pages/watch.html?id=${...}`;
-             *
-             * We will connect this to
-             * your video database later.
-             */
-
-        });
 
     });
 
+});
 
     /* =====================================================
        MY LIST DEMO
@@ -751,6 +759,8 @@ document.addEventListener("DOMContentLoaded", () => {
         createSparkle,
         1000
     );
+
+    
 
 
 });
